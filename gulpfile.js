@@ -1,22 +1,22 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
 	watch = require('gulp-watch');
-var less = require('gulp-less');
-var replace = require('gulp-replace');
-var rename = require('gulp-rename');
-var sourceMaps = require('gulp-sourcemaps');
-var source = require('vinyl-source-stream');
-var exorcist = require('exorcist');
-var browserify = require('browserify');
-var debowerify = require('debowerify');
-var tsify = require('tsify');
-var uglifyJs = require('gulp-uglify');
-var uglifyCss = require('gulp-minify-css');
-var nodemon = require('gulp-nodemon');
-var notify = require('gulp-notify');
-var livereload = require('gulp-livereload');
-var typedoc = require("gulp-typedoc");
+let less = require('gulp-less');
+let replace = require('gulp-replace');
+let rename = require('gulp-rename');
+let sourceMaps = require('gulp-sourcemaps');
+let source = require('vinyl-source-stream');
+let exorcist = require('exorcist');
+let browserify = require('browserify');
+let debowerify = require('debowerify');
+let tsify = require('tsify');
+let uglifyJs = require('gulp-uglify');
+let uglifyCss = require('gulp-minify-css');
+let nodemon = require('gulp-nodemon');
+let notify = require('gulp-notify');
+let livereload = require('gulp-livereload');
+let typedoc = require("gulp-typedoc");
 
-var config = {
+let config = {
 	bowerDir: __dirname + '/bower_components',
 	applicationDir: __dirname + '/app',
 	stylesDir: __dirname + '/styles',
@@ -31,7 +31,7 @@ var config = {
  * Compile ts files to js and save result to public directory
  */
 gulp.task('compile-js', function() {
-	var bundler = browserify({
+	let bundler = browserify({
 			basedir: config.applicationDir,
 			debug: true
 		})
