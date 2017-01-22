@@ -1,7 +1,5 @@
 /// <reference path="../bower_components/phaser/typescript/phaser.d.ts" />
-/// <reference path="BackgroundHelper.ts" />
 
-import BackgroudHelper from './BackgroundHelper';
 /**
  * Основной модуль игры
  * @preferred
@@ -184,7 +182,7 @@ module FlappyDogeGame {
             this.game.load.audio('hit', 'explosion.mp3', true);
             this.game.load.audio('point', 'numkey.wav', true);
             this.game.load.audio('music', 'dogsong.ogg', true);
-			this.game.load.image('gameBackground', new BackgroudHelper().getBackgroudImage());
+			this.game.load.image('gameBackground', 'background.png');
         }
 		
 		
@@ -314,16 +312,6 @@ module FlappyDogeGame {
          * Подробнее: https://phaser.io/docs/2.6.2/Phaser.Game.html 
          */
         game: Phaser.Game;
-		
-		/**
-         * Кнопка переключения фона на день
-         */
-		dayButton;
-		
-		/**
-         * Кнопка переключения фона на ночь
-         */
-		nightButton;
 
         /**
          * Конструктор сцены со SplashScreen'ом
@@ -348,8 +336,6 @@ module FlappyDogeGame {
         preload() {
             this.load.image("logo", "TitleDoggo.gif");
 			this.load.image("click", "click.png");
-			this.game.load.image("nightButton", "nightButton.png");
-			this.game.load.image("dayButton", "dayButton.png");
         }
 
         /**
@@ -363,8 +349,6 @@ module FlappyDogeGame {
             this.titleScreenImage.anchor.setTo(0.5, 0.5);
             this.game.add.tween(this.titleScreenImage.scale).to({ x: 2, y: 2 }, 2000, Phaser.Easing.Bounce.Out, true);
 			this.clickText = this.game.add.sprite(40, this.titleScreenImage.y + this.titleScreenImage.height + 20,"click");
-			this.dayButton = this.game.add.button(210, 560, 'dayButton', this.actionOnClick, this);
-			this.nightButton = this.game.add.button(375, 575, 'nightButton', this.actionOnClick2, this);
             this.input.onTap.addOnce(this.titleClicked,this); 
         }
 
@@ -374,19 +358,6 @@ module FlappyDogeGame {
         titleClicked (){
             this.game.state.start("GameRunningState");
         }
-		
-		/**
-         * Метод, который отработает при клике на кнопку
-         */
-		actionOnClick ():void {
-		window.location.href = 'http://localhost:3000/?bgurl=daybg.png';
-		this.game.state.start("GameRunningState");
-		}
-		
-		actionOnClick2 ():void {
-		window.location.href = 'http://localhost:3000/?bgurl=background.png';
-		this.game.state.start("GameRunningState");
-		}
 		
     }
 	

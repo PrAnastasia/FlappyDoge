@@ -1,6 +1,6 @@
-# Прыгающий пёс поменьше. #
+# Прыгающий пёсик #
 
-Single Page TypeScript Appliaction
+TypeScript Appliaction
 
 **Приложение написано с помощью**
 
