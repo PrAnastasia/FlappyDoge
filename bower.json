@@ -1,0 +1,17 @@
+{
+  "name": "flappyDoge",
+  "version": "1.0.0",
+  "description": "FlappyBird recreation with Undertale themeatics on phaser.io",
+  "licence": "MIT",
+  "authors": [
+    "Anastasia Pravdina <nastya_30_11@mail.ru>"
+  ],
+  "main": [
+    "app/index.ts"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "phaser": "^2.6.2"
+  }
+}

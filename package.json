@@ -1,0 +1,47 @@
+{
+  "name": "flappyDoge",
+  "version": "1.0.0",
+  "description": "FlappyBird recreation with Undertale themeatics on phaser.io",
+  "licence": "MIT",
+  "author": {
+    "name": "Anastasia Pravdina",
+    "email": "nastya_30_11@mail.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "browser-http": "^4.0.1",
+    "browserify": "^13.3.0",
+    "debowerify": "^1.2.0",
+    "exorcist": "^0.1.6",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^0.5.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.3.11",
+    "tsify": "^3.0.0",
+    "vinyl-source-stream": "1.1.0"
+  },
+  "scripts": {
+    "fonts": "gulp fonts",
+    "compile-js": "gulp compile-js",
+    "compile-css": "gulp compile-css",
+    "uglify-js": "gulp uglify-js",
+    "uglify-css": "gulp uglify-css"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.39",
+    "gulp-typedoc": "^2.0.1",
+    "typedoc": "0.5.1",
+    "typedoc-default-themes": "0.4.0"
+  }
+}
