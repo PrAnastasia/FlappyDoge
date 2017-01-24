@@ -1,6 +1,8 @@
 cd .
 @echo off
 cls
+rmdir /S /Q .\docs
+cls
 echo Resolving dependencies...
 echo Npm is running...
 call npm install .
